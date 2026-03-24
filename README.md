@@ -19,10 +19,10 @@ Instead of directly calling backend APIs or browser features, the frontend inter
 
 # Tech Stack
 
-* ⚛️ React + TypeScript
-* ⚡ Vite
-* 🖥️ Neutralinojs (Desktop App Framework)
-* 🌐 Node.js (Backend API)
+* React + TypeScript
+* Vite
+* Neutralinojs (Desktop App Framework)
+* Node.js (Backend API)
 
 ---
 
