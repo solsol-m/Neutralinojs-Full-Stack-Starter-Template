@@ -1,0 +1,50 @@
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: min(640px, 90vw);
+  margin-inline: auto;
+}
+
+.system-info-text {
+  font-size: 12px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.error-text {
+  color: crimson;
+}
+
+.save-feedback {
+  margin: -6px 0 0;
+  font-size: 0.9rem;
+  color: var(--accent);
+}

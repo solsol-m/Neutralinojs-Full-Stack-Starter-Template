@@ -1,84 +1,85 @@
-# Desktop Bridge App
+# Desktop Bridge App Template
 
-A modern fullstack desktop application built using a custom bridge architecture that connects frontend, backend, and system-level APIs in a unified and scalable way.
-Built under time pressure with focus on clean architecture and performance.
+A modern fullstack desktop starter template built using a custom bridge architecture that connects frontend, backend, and system-level APIs in a clean and scalable way.
 
----
-
-##Concept
-
-This project demonstrates a **Bridge System Architecture** where all communication is handled through a single abstraction layer (`api.ts`).
-
-Instead of directly calling backend APIs or browser features, the frontend interacts with a centralized bridge that manages:
-
-* Backend communication
-* Local data persistence
-* System-level access
+This project is designed to help developers quickly start building lightweight desktop applications using web technologies with a clear structure and best practices.
 
 ---
 
-# Tech Stack
+## Project Structure
 
-* React + TypeScript
-* Vite
-* Neutralinojs (Desktop App Framework)
-* Node.js (Backend API)
+```text
+myapp/
+|- frontend/        # React + TypeScript UI
+|- backend/         # Express API server
+|- shared/          # Shared configuration (API paths, keys)
+|- resources/       # Neutralino assets and runtime files
+|- neutralino.config.json
+```
+
+---
+
+## Architecture Overview
+
+This project follows a **layered architecture**:
+
+* **Frontend Layer**
+
+  * Handles UI rendering
+  * Communicates through a single API bridge (`api.ts`)
+
+* **Backend Layer**
+
+  * Handles business logic and API routes
+  * Runs independently using Express
+
+* **Shared Layer**
+
+  * Centralizes configuration used across frontend and backend
+
+* **Bridge Layer**
+
+  * Connects frontend with backend and system APIs
+  * Keeps UI logic clean and isolated from implementation details
 
 ---
 
 ## Features
 
-### 1. Backend Integration
-
-* Fetch data from a custom API
-* Display dynamic server responses
-
-### 2. Local Storage System
-
-* Save user notes locally
-* Persist data across sessions
-
-### 3. System Information Access
-
-* Retrieve system-level environment data using Neutralino
-
-### 4. Bridge Layer (Core Feature)
-
-* Centralized API handler (`api.ts`)
-* Clean separation between UI and logic
-* Scalable and maintainable structure
+* Backend integration (`GET /api/hello`)
+* Local data persistence using `localStorage`
+* System-level access via Neutralino (`Neutralino.os.getEnv`)
+* Clean API bridge for frontend communication
+* Scalable and beginner-friendly project structure
 
 ---
 
-## Architecture
+## Tech Stack
 
-Frontend (React)
-⬇
-Bridge Layer (`api.ts`)
-⬇
-
-* Backend API (Node.js)
-* Local Storage
-* Neutralino System APIs
+* React + TypeScript
+* Vite
+* Node.js + Express
+* Neutralinojs
 
 ---
 
-## How to Run
+## Getting Started
 
-### 1. Start Backend
+### 1) Start backend
 
 ```bash
-node server/index.js
+cd backend
+npm start
 ```
 
-### 2. Build Frontend
+### 2) Build frontend
 
 ```bash
-cd client
+cd frontend
 npm run build
 ```
 
-### 3. Run Desktop App
+### 3) Run desktop app
 
 ```bash
 neu run
@@ -86,20 +87,23 @@ neu run
 
 ---
 
-## Why This Project?
+## How to Use This Template
 
-This project was built to demonstrate:
-
-* Understanding of fullstack architecture
-* Ability to integrate desktop + web technologies
-* Clean code organization using abstraction layers
-* Practical problem solving and debugging
+1. Replace UI components inside `frontend/`
+2. Add your API routes inside `backend/`
+3. Update shared configuration in `shared/app.config.json`
+4. Extend the API bridge in `frontend/src/api.ts`
 
 ---
 
-##  Author
+## Why This Project?
 
-Malak Elmalahi
+This project demonstrates:
+
+* Real fullstack architecture in a desktop environment
+* Clean separation of concerns (frontend / backend / shared)
+* Practical integration between web and system-level APIs
+* Writing scalable and maintainable code
 
 ---
 
@@ -112,8 +116,12 @@ Malak Elmalahi
 
 ---
 
-##  Final Note
+## Author
 
-This is not just a simple app — it is a demonstration of building a **scalable architecture** using modern technologies.
+Malak Elmalahi
 
 ---
+
+## Final Note
+
+This is not just a simple application — it is a **starter template** designed to help developers build scalable desktop applications using modern web technologies.
